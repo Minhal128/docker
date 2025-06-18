@@ -1,0 +1,107 @@
+body {
+  background: #18181b;
+  color: #f4f4f5;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #18181b 80%, #ff003c 100%);
+  padding: 1rem;
+}
+
+.dashboard-card {
+  background: #232326;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.25);
+  padding: 2.5rem 2rem;
+  max-width: 420px;
+  width: 100%;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-title {
+  color: #ff003c;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.checkbox-group {
+  display: flex;
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.custom-checkbox {
+  width: 22px;
+  height: 22px;
+  accent-color: #ff003c;
+  background: #232326;
+  border: 2px solid #ff003c;
+  border-radius: 6px;
+  transition: box-shadow 0.2s;
+}
+.custom-checkbox:focus {
+  box-shadow: 0 0 0 2px #ff003c55;
+}
+
+.dashboard-btn {
+  background: #ff003c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(255,0,60,0.08);
+  width: 100%;
+  max-width: 200px;
+  align-self: flex-start;
+}
+.dashboard-btn:hover, .dashboard-btn:focus {
+  background: #d60032;
+  box-shadow: 0 4px 16px rgba(255,0,60,0.18);
+}
+
+@media (max-width: 600px) {
+  .dashboard-card {
+    padding: 1.5rem 0.7rem;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+  .dashboard-title {
+    font-size: 1.4rem;
+  }
+  .dashboard-btn {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .dashboard-card {
+    padding: 1rem 0.2rem;
+    border-radius: 8px;
+  }
+  .dashboard-title {
+    font-size: 1.1rem;
+  }
+} 
