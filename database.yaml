@@ -20,6 +20,18 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: admin123
       ME_CONFIG_MONGODB_SERVER: mongodb
 
+  app:
+    image: lsd-testapp:1.0
+    build: .
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+    environment:
+      # Pass MongoDB connection string to backend
+      MONGO_URI: mongodb://admin:admin123@mongodb:27017/
+    depends_on:
+      - mongodb
+
 volumes:
   mongo_data:
         
